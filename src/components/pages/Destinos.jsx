@@ -11,7 +11,7 @@ function Destinos() {
 
         async function obtenerDestinos() {
             try {
-                const response = await fetch('/api/destinos', {
+                const response = await fetch('${import.meta.env.BASE_URL}api/destinos', {
                     signal: controller.signal,
                 })
 

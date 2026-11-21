@@ -1,7 +1,9 @@
 import { http, HttpResponse } from 'msw';
 import { graphql } from 'msw/graphql';
 
-const apiGraphQL = graphql.link('/graphql')
+const base = import.meta.env.BASE_URL
+
+const apiGraphQL = graphql.link(`${base}graphql`)
 
 const data = {
      "destinos": [

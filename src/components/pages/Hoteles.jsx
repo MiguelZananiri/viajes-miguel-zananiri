@@ -26,7 +26,7 @@ function Hoteles() {
 
         async function obtenerHoteles() {
             try {
-                const response = await fetch('/graphql', {
+                const response = await fetch('${import.meta.env.BASE_URL}graphql', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ query: OBTENER_OPCIONES_DESTINO, variables: { destinoId } }),
