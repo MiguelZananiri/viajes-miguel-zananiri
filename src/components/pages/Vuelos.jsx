@@ -26,7 +26,7 @@ function Vuelos() {
 
         async function obtenerVuelos() {
             try {
-                const response = await fetch('${import.meta.env.BASE_URL}graphql', {
+                const response = await fetch(`${import.meta.env.BASE_URL}graphql`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ query: OBTENER_OPCIONES_DESTINO, variables: { destinoId } }),

@@ -7,8 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 async function enableMocking() {
-  if (process.env.NODE_ENV != 'development') return;
-
   await worker.start({
     serviceWorker: {
       url: `${import.meta.env.BASE_URL}mockServiceWorker.js`

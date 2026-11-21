@@ -191,7 +191,7 @@ const data = {
 
 
 export const handlers = [
-    http.get("/api/destinos", () => {
+    http.get(`${base}api/destinos`, () => {
         return HttpResponse.json(data.destinos);
     }),
 
