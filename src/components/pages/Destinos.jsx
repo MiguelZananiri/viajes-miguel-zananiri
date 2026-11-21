@@ -58,7 +58,7 @@ function Destinos() {
                     <div className="destinos-container">
                         {destinos.map((destino) => (
                             <div className="destinos" key={destino.id}>
-                                <img src={destino.imagen} />
+                                <img src={`${import.meta.env.BASE_URL}${destino.imagen.replace(/^\//, '')}`} />
                                 <div className="detalle">
                                     <h2>{destino.ciudad}</h2>
                                     <p>Pais: {destino.pais}</p>

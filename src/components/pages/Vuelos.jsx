@@ -88,7 +88,7 @@ function Vuelos() {
                 <div className="vuelos-container">
                     {vuelos.map((vuelo) => (
                         <div className="vuelos" key={vuelo.id}>
-                            <img src={vuelo.imagen} />
+                            <img src={`${import.meta.env.BASE_URL}${vuelo.imagen.replace(/^\//, '')}`} />
                             <div className="detalle">
                                 <p>{vuelo.vuelo}</p>
                                 <p>CLP$ {vuelo.precio.toLocaleString("es-CL")}</p>
